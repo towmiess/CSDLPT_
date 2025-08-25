@@ -1,0 +1,10 @@
+Phần 1: Đặt Vấn đề: Thơm 
+Phần 2: Phân tích: Trà ( I - II - III) - Tú (IV- V)
+Phần 3: Thiết kế:
+- Tuân: I: Thiết kế mạng tổng quan 
+	II: Thiết kế csdlpt
+Tuân + Việt : lập table Phân mảnh ngang , nhân bản 
+- Việt: III. Lược đồ nhân bản, đồng bộ hóa 
+	IV. Thiết kế vật lí trực quan các trạm 
+Cường: Phan mảnh dọc 
+----DEALINE: TRƯA T4: 30/10---

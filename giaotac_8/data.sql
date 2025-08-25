@@ -1,0 +1,141 @@
+INSERT INTO TruSoChinh (ID_TruSoChinh, TenTruSoChinh, DiaChi, Email, SoDienThoai) VALUES 
+('TS01', 'ORGASM', 'Ha Noi', 'contact_orgasm@gmail.com', '0350899999')
+
+INSERT INTO ChinhSach (ID_ChinhSach, TenChinhSach, MoTa) VALUES
+('CS01', 'Chinh sach so cap', 'Ho tro tai chinh cho cac du an khoi nghiep va sang tao moi'),
+('CS02', 'Chinh sach trung cap', 'Cac bien phap nham giam thieu luong phat thai carbon trong qua trinh san xuat'),
+('CS03', 'Chinh sach cao cap', 'Chuong trinh dao tao nang cao cho nhan vien moi ve an toan lao dong');
+
+INSERT INTO ChiNhanh (ID_ChiNhanh, ID_TruSoChinh,ID_ChinhSach, TenChiNhanh, DiaChi, Email, SoDienThoai)
+VALUES
+('CN01', 'TS01', 'CS01', 'ORGASM Hue', 'Hue', 'orgasmhue@gmail.com', '0697544474'),
+('CN02', 'TS01', 'CS02', 'ORGASM Nam Dinh', 'Nam Dinh', 'orgasmnamdinh@gmail.com', '0011316683'),
+('CN03', 'TS01', 'CS03', 'ORGASM Vinh', 'Vinh', 'orgasmvinh@gmail.com', '0849477261'),
+('CN04', 'TS01', 'CS01', 'ORGASM Nha Trang', 'Nha Trang', 'orgasmnhatrang@gmail.com', '0286266336'),
+('CN05', 'TS01', 'CS02', 'ORGASM Thai Binh', 'Thai Binh', 'orgasmthaibinh@gmail.com', '0693165656'),
+('CN06', 'TS01', 'CS03', 'ORGASM Ha Noi', 'Ha Noi', 'orgasmhanoi@gmail.com', '0083030275'),
+('CN07', 'TS01', 'CS01', 'ORGASM Binh Duong', 'Binh Duong', 'orgasmbinhduong@gmail.com', '0862513408'),
+('CN08', 'TS01', 'CS02', 'ORGASM Dong Nai', 'Dong Nai', 'orgasmdongnai@gmail.com', '0975915152'),
+('CN09', 'TS01', 'CS03', 'ORGASM Phu Tho', 'Phu Tho', 'orgasmphutho@gmail.com', '0346335984'),
+('CN10', 'TS01', 'CS01', 'ORGASM Da Nang', 'Da Nang', 'orgasmdanang@gmail.com', '0894397027')
+
+
+INSERT INTO PhongBan(ID_PhongBan, ID_ChiNhanh, TenPhongBan, Email, SoDienThoai) VALUES
+('HPB01', 'CN01', 'Ke Toan', 'ketoancn01@gmail.com', '0642180039'),
+('HPB02', 'CN01', 'Nhan Su', 'nhansucn01@gmail.com', '0480893679'),
+('HPB03', 'CN01', 'Marketing', 'marketingcn01@gmail.com', '0238404008'),
+('HPB04', 'CN01', 'Kinh Doanh', 'kinhdoanhcn01@gmail.com', '0401430675'),
+('HPB05', 'CN01', 'Ky Thuat', 'kythuatcn01@gmail.com', '0776520517'),
+('HPB06', 'CN01', 'Phat Trien San Pham', 'phattriensanphamcn01@gmail.com', '0989643680'),
+('HPB07', 'CN01', 'Hanh Chinh', 'hanhchinhcn01@gmail.com', '0710134506'),
+('HPB08', 'CN01', 'Bao Tri', 'baotricn01@gmail.com', '0860510671'),
+('HPB09', 'CN01', 'IT', 'itcn01@gmail.com', '0899316260'),
+('HPB10', 'CN01', 'Ban Hang', 'banhangcn01@gmail.com', '0770119940');
+
+INSERT INTO DuAn (ID_DuAn, ID_PhongBan, TenDuAn, NgayBatDau, ThoiHan, MoTa) VALUES
+('HDA01', 'HPB02', 'Phat trien san pham moi', '2023-07-06', 23, 'Phat trien san pham moi cho thi truong 2024'),
+('HDA02', 'HPB03', 'Chien dich quang cao', '2023-05-25', 22, 'Chien dich quang cao online toan quoc'),
+('HDA03', 'HPB04', 'Nang cap he thong IT', '2023-10-09', 23, 'Nang cap he thong IT de tang toc do xu ly du lieu'),
+('HDA04', 'HPB05', 'Tuyen dung quy II', '2023-07-06', 10, 'Chuong trinh tuyen dung moi cho quy II'),
+('HDA05', 'HPB06', 'Dao tao nhan vien', '2023-08-24', 19, 'Chuong trinh dao tao ky nang mem cho nhan vien'),
+('HDA06', 'HPB07', 'Xay dung chi nhanh moi', '2023-08-13', 7, 'Du an xay dung chi nhanh moi tai Da Nang'),
+('HDA07', 'HPB08', 'Khai truong san pham', '2023-12-20', 8, 'Khai truong san pham moi tai Ha Noi'),
+('HDA08', 'HPB09', 'Nghien cuu thi truong', '2023-11-09', 19, 'Nghien cuu thi truong tieu dung moi'),
+('HDA09', 'HPB10', 'Phat trien ung dung mobile', '2023-01-11', 6, 'Phat trien ung dung mobile cho dich vu khach hang'),
+('HDA10', 'HPB01', 'Tang cuong bao mat', '2023-02-26', 17, 'Du an tang cuong bao mat thong tin khach hang');
+
+INSERT INTO ChucVu (ID_ChucVu, ID_ChiNhanh, TenChucVu, BacLuong) VALUES
+('HCV01', 'CN01', 'Giam doc', 1),
+('HCV02', 'CN01', 'Pho Giam doc', 2),
+('HCV03', 'CN01', 'Truong phong', 3),
+('HCV04', 'CN01', 'Pho Truong phong', 4),
+('HCV05', 'CN01', 'Chuyen vien cao cap', 5),
+('HCV06', 'CN01', 'Chuyen vien chinh', 6),
+('HCV07', 'CN01', 'Chuyen vien', 7),
+('HCV08', 'CN01', 'Nhan vien kinh doanh', 8),
+('HCV09', 'CN01', 'Nhan vien hanh chinh', 9),
+('HCV10', 'CN01', 'Nhan vien ky thuat', 10);
+
+
+INSERT INTO NhanVien (ID_NhanVien, ID_DuAn, ID_ChucVu, ID_ChiNhanh, ID_PhongBan, HoTen, NgaySinh, GioiTinh, DanToc, CCCD, SoDienThoai, Email, DiaChi) VALUES
+('HNV01', 'HDA01', 'HCV01', 'CN01', 'HPB01', 'Tran Quy Dat', '2000-12-09', 'Nam', 'Kinh', '001412454343', '0933223334', 'nguyenbanglinh@gmail.com', 'Hai Phong'),
+('HNV02', 'HDA02', 'HCV02', 'CN01', 'HPB02', 'Nguyen Thi Lan', '1998-05-05', 'Nu', 'Tay', '001980505050', '0947589101', 'lethibao@gmail.com', 'Ha Noi'),
+('HNV03', 'HDA03', 'HCV03', 'CN01', 'HPB03', 'Nguyen Huu Quang Hoa', '1995-11-15', 'Nam', 'Muong', '001951115151', '0959783678', 'tranvancuong@gmail.com', 'Da Nang'),
+('HNV04', 'HDA04', 'HCV04', 'CN01', 'HPB04', 'Nguyen Tien Thang', '1997-07-20', 'Nu', 'Thai', '001970720202', '0912309856', 'phamvandung@gmail.com', 'Hue'),
+('HNV05', 'HDA05', 'HCV05', 'CN01', 'HPB05', 'Ho Van Eo', '1996-03-25', 'Nam', 'Dao', '001960325252', '0956722381', 'hovaneo@gmail.com', 'Can Tho'),
+('HNV06', 'HDA06', 'HCV06', 'CN01', 'HPB06', 'Nguyen Van Fai', '2002-09-30', 'Nam', 'Cham', '001200930303', '0959873978', 'nguyenvanfai@gmail.com', 'Hai Phong'),
+('HNV07', 'HDA07', 'HCV07', 'CN01', 'HPB07', 'Le Van Gia', '1999-08-10', 'Nu', 'Kinh', '001990810404', '0942786225', 'levangia@gmail.com', 'Nha Trang'),
+('HNV08', 'HDA08', 'HCV08', 'CN01', 'HPB08', 'Tran Van Hau', '2001-06-05', 'Nam', 'Tay', '001010605505', '0958252589', 'tranvanhau@gmail.com', 'Da Lat'),
+('HNV09', 'HDA09', 'HCV09', 'CN01', 'HPB09', 'Pham Van Tho', '1994-04-22', 'Nu', 'Muong', '001940422606', '0952553048', 'phamvantho@gmail.com', 'Vung Tau'),
+('HNV10', 'HDA10', 'HCV10', 'CN01', 'HPB10', 'Nguyen Van An', '2000-02-03', 'Nam', 'Thai', '001200203737', '0913209478', 'nguyenvanan@gmail.com', 'Phu Quoc'),
+('HNV11', 'HDA01', 'HCV01', 'CN01', 'HPB01', 'Le Van Thinh', '1997-12-01', 'Nu', 'Dao', '001970120868', '0941424577', 'levanthinh@gmail.com', 'Lao Cai'),
+('HNV12', 'HDA02', 'HCV02', 'CN01', 'HPB02', 'Tran Van Lan', '1998-04-30', 'Nam', 'Cham', '001980430909', '0954433494', 'tranvanlan@gmail.com', 'Sapa'),
+('HNV13', 'HDA03', 'HCV03', 'CN01', 'HPB03', 'Pham Van Mai', '1993-10-17', 'Nu', 'Kinh', '001931017010', '0952435573', 'phamvanmai@gmail.com', 'Mai Chau'),
+('HNV14', 'HDA04', 'HCV04', 'CN01', 'HPB04', 'Ho Van Tuan', '1995-03-21', 'Nam', 'Tay', '001950321121', '0944578898', 'hovantuan@gmail.com', 'Son La'),
+('HNV15', 'HDA05', 'HCV05', 'CN01', 'HPB05', 'Nguyen Van Quang', '2002-05-10', 'Nu', 'Muong', '001200510232', '0977878675', 'nguyenvanquang@gmail.com', 'Moc Chau'),
+('HNV16', 'HDA06', 'HCV06', 'CN01', 'HPB06', 'Le Van Van', '1996-08-29', 'Nam', 'Thai', '001960829343', '0933255552', 'levanvan@gmail.com', 'Hoa Binh'),
+('HNV17', 'HDA07', 'HCV07', 'CN01', 'HPB07', 'Tran Van Duc', '1994-11-27', 'Nu', 'Dao', '001941127454', '0955423867', 'tranvanduc@gmail.com', 'Yen Bai'),
+('HNV18', 'HDA08', 'HCV08', 'CN01', 'HPB08', 'Pham Van Tai', '2000-07-14', 'Nam', 'Cham', '001200714565', '0952245595', 'phamvantai@gmail.com', 'Quy Nhon'),
+('HNV19', 'HDA09', 'HCV09', 'CN01', 'HPB09', 'Nguyen Van Tinh', '1999-12-25', 'Nu', 'Kinh', '001991225676', '0957523464', 'nguyenvantinh@gmail.com', 'Phan Thiet'),
+('HNV20', 'HDA10', 'HCV10', 'CN01', 'HPB10', 'Le Van Hoa', '1999-01-10', 'Nam', 'Muong', '001990110707', '0952357686', 'levanhoa@gmail.com', 'Soc Trang'),
+('HNV21', 'HDA01', 'HCV01', 'CN01', 'HPB01', 'Tran Van Quoc', '2001-02-20', 'Nu', 'Tay', '001102202010', '0943444465', 'tranvanquoc@gmail.com', 'Bac Lieu'),
+('HNV22', 'HDA02', 'HCV02', 'CN01', 'HPB02', 'Pham Van Tam', '1997-03-30', 'Nam', 'Dao', '001970330101', '0999775886', 'phamvantam@gmail.com', 'Long An'),
+('HNV23', 'HDA03', 'HCV03', 'CN01', 'HPB03', 'Ho Van Hung', '1998-04-15', 'Nu', 'Thai', '001980415303', '0952523587', 'hovanhung@gmail.com', 'Tay Ninh'),
+('HNV24', 'HDA04', 'HCV04', 'CN01', 'HPB04', 'Nguyen Van Luong', '2000-06-25', 'Nam', 'Kinh', '001200625404', '0952523987', 'nguyenvanluong@gmail.com', 'Dong Thap'),
+('HNV25', 'HDA05', 'HCV05', 'CN01', 'HPB05', 'Le Van Nam', '2002-07-05', 'Nu', 'Cham', '001200705505', '0954543587', 'levannam@gmail.com', 'Binh Duong'),
+('HNV26', 'HDA06', 'HCV06', 'CN01', 'HPB06', 'Tran Van Dinh', '1996-08-17', 'Nam', 'Kinh', '001960817606', '0952578587', 'tranvandinh@gmail.com', 'Binh Phuoc'),
+('HNV27', 'HDA07', 'HCV07', 'CN01', 'HPB07', 'Pham Van Hoang', '1994-09-22', 'Nu', 'Dao', '001940922707', '0972523587', 'phamvanhoang@gmail.com', 'Tien Giang'),
+('HNV28', 'HDA08', 'HCV08', 'CN01', 'HPB08', 'Ho Van Khanh', '2000-10-07', 'Nam', 'Tay', '001001007808', '0957723587', 'hovankhanh@gmail.com', 'Lam Dong'),
+('HNV29', 'HDA09', 'HCV09', 'CN01', 'HPB09', 'Nguyen Van Phuc', '1999-11-18', 'Nu', 'Thai', '001991118909', '0952523597', 'nguyenvanphuc@gmail.com', 'Ben Tre'),
+('HNV30', 'HDA10', 'HCV10', 'CN01', 'HPB10', 'Le Van Sang', '1998-01-30', 'Nam', 'Muong', '001980130131', '0955237587', 'levansang@gmail.com', 'Ca Mau'),
+('HNV31', 'HDA01', 'HCV01', 'CN01', 'HPB01', 'Tran Van Tinh', '2000-02-10', 'Nu', 'Tay', '001002100202', '0952525687', 'tranvantinh@gmail.com', 'Hai Duong'),
+('HNV32', 'HDA02', 'HCV02', 'CN01', 'HPB02', 'Pham Van Trung', '1997-03-25', 'Nam', 'Dao', '001970325303', '0959993587', 'phamvantrung@gmail.com', 'Ninh Binh'),
+('HNV33', 'HDA03', 'HCV03', 'CN01', 'HPB03', 'Ho Van Luong', '1998-04-15', 'Nu', 'Thai', '001980415404', '0952523544', 'hovanluong@gmail.com', 'Lai Chau'),
+('HNV34', 'HDA04', 'HCV04', 'CN01', 'HPB04', 'Nguyen Van Duc', '2000-06-25', 'Nam', 'Kinh', '001200625505', '0907023587', 'nguyenvanduc@gmail.com', 'Bac Ninh'),
+('HNV35', 'HDA05', 'HCV05', 'CN01', 'HPB05', 'Le Van Tho', '2002-07-05', 'Nu', 'Cham', '001200705606', '0952523777', 'levantho@gmail.com', 'Nam Dinh'),
+('HNV36', 'HDA06', 'HCV06', 'CN01', 'HPB06', 'Tran Van Cuong', '1996-08-17', 'Nam', 'Kinh', '001960817707', '0952555587', 'tranvancuong@gmail.com', 'Gia Lai'),
+('HNV37', 'HDA07', 'HCV07', 'CN01', 'HPB07', 'Pham Van Tuan', '1994-09-22', 'Nu', 'Dao', '001940922808', '0925253587', 'phamvantuan@gmail.com', 'Bac Kan'),
+('HNV38', 'HDA08', 'HCV08', 'CN01', 'HPB08', 'Ho Van Dinh', '2000-10-07', 'Nam', 'Tay', '001001007909', '0952525557', 'hovandinh@gmail.com', 'Cao Bang'),
+('HNV39', 'HDA09', 'HCV09', 'CN01', 'HPB09', 'Nguyen Van Cuong', '1999-11-18', 'Nu', 'Thai', '001991118010', '0945666543', 'nguyenvancuong@gmail.com', 'Phu Yen');
+
+INSERT INTO Luong (ID_Luong, ID_NhanVien, MucLuong) VALUES
+('HL01', 'HNV01', 70000000),
+('HL02', 'HNV02', 64000000),
+('HL03', 'HNV03', 58000000),
+('HL04', 'HNV04', 52000000),
+('HL05', 'HNV05', 46000000),
+('HL06', 'HNV06', 40000000),
+('HL07', 'HNV07', 34000000),
+('HL08', 'HNV08', 28000000),
+('HL09', 'HNV09', 22000000),
+('HL10', 'HNV10', 16000000),
+('HL11', 'HNV11', 70000000),
+('HL12', 'HNV12', 64000000),
+('HL13', 'HNV13', 58000000),
+('HL14', 'HNV14', 52000000),
+('HL15', 'HNV15', 46000000),
+('HL16', 'HNV16', 40000000),
+('HL17', 'HNV17', 34000000),
+('HL18', 'HNV18', 28000000),
+('HL19', 'HNV19', 22000000),
+('HL20', 'HNV20', 16000000),
+('HL21', 'HNV21', 70000000),
+('HL22', 'HNV22', 64000000),
+('HL23', 'HNV23', 58000000),
+('HL24', 'HNV24', 52000000),
+('HL25', 'HNV25', 46000000),
+('HL26', 'HNV26', 40000000),
+('HL27', 'HNV27', 34000000),
+('HL28', 'HNV28', 28000000),
+('HL29', 'HNV29', 22000000),
+('HL30', 'HNV30', 16000000),
+('HL31', 'HNV31', 70000000),
+('HL32', 'HNV32', 64000000),
+('HL33', 'HNV33', 58000000),
+('HL34', 'HNV34', 52000000),
+('HL35', 'HNV35', 46000000),
+('HL36', 'HNV36', 40000000),
+('HL37', 'HNV37', 34000000),
+('HL38', 'HNV38', 28000000),
+('HL39', 'HNV39', 22000000);
+
